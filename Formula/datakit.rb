@@ -5,12 +5,12 @@
 class Datakit < Formula
   desc "Software to create fast and easy drum rolls."
   homepage "https://datakit.guance.io/"
-  version "1.6.3-alpha"
+  version "1.6.0-alpha"
   license "MIT"
 
   on_macos do
-    url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.3-alpha/datakit_1.6.3-alpha_darwin_amd64.zip", using: CurlDownloadStrategy
-    sha256 "0be4adfe4679bfb782f303ad96ebade687c1f670241dbfa06ee0f0aa69b75019"
+    url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.0-alpha/datakit_1.6.0-alpha_darwin_amd64.zip", using: CurlDownloadStrategy
+    sha256 "5ebfb0eefbe13e9e19e818d5d5e9b63068f05f06426449382702bf1f3d298f3d"
 
     def install
       bin.install "datakit"
@@ -30,8 +30,8 @@ class Datakit < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.3-alpha/datakit_1.6.3-alpha_linux_amd64.zip", using: CurlDownloadStrategy
-      sha256 "d1887ee67fbd96de3076f976a4f39ae05c2c99e508a356e5c2c565f786268e14"
+      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.0-alpha/datakit_1.6.0-alpha_linux_amd64.zip", using: CurlDownloadStrategy
+      sha256 "9dee5204086886af6e5ca98b62b0b3b99146e8ec6bcb843a639669e83b4c0d16"
 
       def install
         bin.install "datakit"
@@ -39,8 +39,8 @@ class Datakit < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.3-alpha/datakit_1.6.3-alpha_linux_arm.zip", using: CurlDownloadStrategy
-      sha256 "be11c610d6c4e31cc608daf2651722e64f9d1f436a62eab91659422e496f5e23"
+      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.0-alpha/datakit_1.6.0-alpha_linux_arm.zip", using: CurlDownloadStrategy
+      sha256 "ad5bb4df68eaa02ba0b68b51715186c157ada164d51cebe0480fb9bd9a9078ad"
 
       def install
         bin.install "datakit"
@@ -48,8 +48,8 @@ class Datakit < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.3-alpha/datakit_1.6.3-alpha_linux_arm64.zip", using: CurlDownloadStrategy
-      sha256 "11d4334f59b60d839e231bfa3b8b43e599a3ba6e7f4c51b3e9feaaeed947a374"
+      url "https://github.com/GuanceCloud/datakit/releases/download/v1.6.0-alpha/datakit_1.6.0-alpha_linux_arm64.zip", using: CurlDownloadStrategy
+      sha256 "7db7175112967c6fff6648851a3535a2bbd7a31b8afde34d7827adc0707d9c92"
 
       def install
         bin.install "datakit"
