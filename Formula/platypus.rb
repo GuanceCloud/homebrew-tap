@@ -5,22 +5,22 @@
 class Platypus < Formula
   desc "Software to create fast and easy drum rolls."
   homepage "https://platypus.guance.io/"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.5/platypus_0.2.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b0016bf34bfc34f74bd274e80b6aea4d2f0488be44d80458c5a3efc00a16cba0"
+    if Hardware::CPU.intel?
+      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.6/platypus_0.2.6_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6c6dbcdeb512006811989c71990cf280040c6993e62bd502364607ebac5e1393"
 
       def install
         bin.install "platypus"
         # ...
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.5/platypus_0.2.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a3dd1886b31a22c24d083ce2e2e47640f1f25898b64041434b08c1f3ead7569f"
+    if Hardware::CPU.arm?
+      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.6/platypus_0.2.6_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "4d89db683c79dfe43b38c72b256acbcba3e88087b652d32b2f716719ce8b0c9b"
 
       def install
         bin.install "platypus"
@@ -31,8 +31,8 @@ class Platypus < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.5/platypus_0.2.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "83a47dba6d60c89f5a0eda0ab6f2e2add24965aa097fe5d510e9d8c39964ec96"
+      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.6/platypus_0.2.6_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1f04ae498d7899b5afdf4816e17fcd95ba00a6d5a859abb5eda0138dba0bddfc"
 
       def install
         bin.install "platypus"
@@ -40,8 +40,8 @@ class Platypus < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.5/platypus_0.2.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "00129bf7810efabc74b2f373e7b914a72718f6194e12767823b21aaec0a9c8e0"
+      url "https://github.com/GuanceCloud/platypus/releases/download/v0.2.6/platypus_0.2.6_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "784928a739f43401e8f739814a88de697e6e4d2a40a41c4518286fc7a2598eed"
 
       def install
         bin.install "platypus"
