@@ -5,13 +5,13 @@
 class Guance < Formula
   desc "Software to create fast and easy drum rolls."
   homepage "https://guance.io/"
-  version "0.2.2-alpha1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2-alpha1/guance_0.2.2-alpha1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7dde8822bb13c6b98c8bd49118dd453a5f2f686277d2dd9661c82f5249c2f285"
+      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2/guance_0.2.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "700d975124b83a0f09c2fab8a7b46cff81417b2eef912beb5a239feac9dae60c"
 
       def install
         bin.install "guance"
@@ -19,8 +19,8 @@ class Guance < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2-alpha1/guance_0.2.2-alpha1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3a8a1668676006fa40eafb161a8f2936097a11a9acf7a4392a687e3e2fb44df2"
+      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2/guance_0.2.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a5340f55a7629404d678a86cf1027458e51429b0783b51d5dfe743e481d351ab"
 
       def install
         bin.install "guance"
@@ -30,18 +30,18 @@ class Guance < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2-alpha1/guance_0.2.2-alpha1_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7f17ccfb17c811cc7ec65464959cc1fffcd42705abcfba3f51d264089af6b67d"
+    if Hardware::CPU.intel?
+      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2/guance_0.2.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "260a23edf63ced15b73fa2a563b64f335124cf4177450fc12a5c2cee66ead3b3"
 
       def install
         bin.install "guance"
         # ...
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2-alpha1/guance_0.2.2-alpha1_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "210f8cc7e11919d3825c6f2b4429fc904cb4373c505c64a86afb8195e28a3297"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/GuanceCloud/guance-cli/releases/download/v0.2.2/guance_0.2.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7700e36037f9eb4f8f068900dccfd890073fe262534ad6455009842854c86340"
 
       def install
         bin.install "guance"
